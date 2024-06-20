@@ -77,6 +77,10 @@ impl AsyncPush {
 		Ok(res.as_ref().map(|progress| progress.clone().into()))
 	}
 
+    pub fn request_with_timeout(&mut self, params: PushRequest) -> Result<()> {
+        Ok(())
+    }
+
 	///
 	pub fn request(&mut self, params: PushRequest) -> Result<()> {
 		log::trace!("request");
